@@ -1,0 +1,83 @@
+.banner {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  &__infor {
+    width: 80%;
+  }
+  &__image {
+    width: 20%;
+    transform: translateX(50px)
+  }
+  &__heading {
+    font-size: 55px;
+    line-height: 1.4;
+    color: $gray-dark;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  &__heading span {
+    display: block;
+  }
+  &__desc {
+    font-weight: 300;
+    color: $gray-blur;
+    margin-bottom: 35px;
+    line-height: 1.5;
+  }
+  &__links {
+    .button:first-child{
+      margin-right: 40px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+@media screen and (max-width: 1279px) {
+  .banner__heading {
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
+  .banner__desc {
+    margin-bottom: 30px;
+  }
+  .banner__links {
+    .button {
+      padding: 15px 20px;
+    }
+    .button:first-child{
+      margin-right: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+}
+@media screen and (max-width: 1023px) {
+  .banner {
+    flex-direction: column;
+    & > * {
+      width: 100%;
+      // >* la lay hai cai con cua banner
+    }
+  }
+  .banner__image {
+    transform: none;
+    margin-top: 25px;
+    width:'20%'
+
+  }
+
+}
+@media screen and (max-width: 767px) {
+  .banner {
+    padding-top: 40px;
+  }
+.banner__heading {
+  margin-bottom: 15px;
+  span {
+    display: unset;
+  }
+}
+}
+
